@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Twice</RootNamespace>
+        <RuntimeIdentifier Condition="'$(RuntimeIdentifier)' == ''">$(NETCoreSdkRuntimeIdentifier)</RuntimeIdentifier>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Twice.Compiler.Backend.SimpleAST\Twice.Compiler.Backend.SimpleAST.csproj" />
+      <ProjectReference Include="..\Twice.Compiler.Backend.Codegen\Twice.Compiler.Backend.Codegen.csproj" />
+      <ProjectReference Include="..\Twice.Compiler.Backend.Parser\Twice.Compiler.Backend.Parser.csproj" />
+      <ProjectReference Include="..\Twice.Compiler.Backend.TypeChecker\Twice.Compiler.Backend.TypeChecker.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="LLVMSharp" Version="16.0.0" />
+    </ItemGroup>
+
+</Project>

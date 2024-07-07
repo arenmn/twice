@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>TypedAST</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Twice.Compiler.Backend.SimpleAST\Twice.Compiler.Backend.SimpleAST.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="LLVMSharp" Version="16.0.0" />
+    </ItemGroup>
+
+</Project>
